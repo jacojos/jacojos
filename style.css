@@ -192,3 +192,12 @@ footer {
     width: 100%;
   }
 }
+.owner-card img {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px;
+  border-radius: 14px;
+  border: 2px solid var(--accent);
+}
