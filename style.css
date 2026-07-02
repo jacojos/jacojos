@@ -14,6 +14,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Vesper Libre', serif;
@@ -36,6 +40,7 @@ header {
   border-bottom: 2px solid var(--accent);
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 .container {
@@ -130,6 +135,7 @@ li {
   border-radius: 999px;
   font-weight: 700;
   border: 2px solid var(--accent);
+  transition: 0.2s ease;
 }
 
 .button.primary {
@@ -141,12 +147,18 @@ li {
   color: var(--accent);
 }
 
+.button:hover {
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
 main {
   padding-bottom: 60px;
 }
 
 section {
   padding: 24px 0;
+  scroll-margin-top: 110px;
 }
 
 .grid {
@@ -168,17 +180,49 @@ ul.clean {
   padding-left: 20px;
 }
 
+.highlight {
+  color: var(--accent);
+  font-weight: 700;
+}
+
 footer {
   border-top: 1px solid var(--border);
   padding: 24px 0 40px;
   color: var(--muted);
 }
 
-.highlight {
-  color: var(--accent);
-  font-weight: 700;
+.owner-card img {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px;
+  border-radius: 14px;
+  border: 2px solid var(--accent);
 }
 
+/* GHL embeds */
+iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.section-box iframe {
+  margin-top: 18px;
+  background: #fff;
+  border-radius: 12px;
+}
+
+#book-now iframe {
+  min-height: 720px;
+}
+
+#request-service iframe {
+  min-height: 860px;
+}
+
+/* Mobile */
 @media (max-width: 700px) {
   .brand h1 {
     font-size: 1.6rem;
@@ -188,16 +232,38 @@ footer {
     font-size: 1.9rem;
   }
 
+  .topbar {
+    align-items: flex-start;
+  }
+
   nav {
     width: 100%;
   }
-}
-.owner-card img {
-  width: 100%;
-  max-width: 260px;
-  height: auto;
-  display: block;
-  margin: 0 auto 15px;
-  border-radius: 14px;
-  border: 2px solid var(--accent);
+
+  nav a {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .hero-box,
+  .section-box {
+    padding: 20px;
+  }
+
+  .button-row {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+
+  #book-now iframe {
+    min-height: 760px;
+  }
+
+  #request-service iframe {
+    min-height: 920px;
+  }
 }
