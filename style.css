@@ -135,7 +135,6 @@ li {
   border-radius: 999px;
   font-weight: 700;
   border: 2px solid var(--accent);
-  transition: 0.2s ease;
 }
 
 .button.primary {
@@ -145,11 +144,6 @@ li {
 
 .button.secondary {
   color: var(--accent);
-}
-
-.button:hover {
-  transform: translateY(-1px);
-  text-decoration: none;
 }
 
 main {
@@ -180,28 +174,18 @@ ul.clean {
   padding-left: 20px;
 }
 
-.highlight {
-  color: var(--accent);
-  font-weight: 700;
-}
-
 footer {
   border-top: 1px solid var(--border);
   padding: 24px 0 40px;
   color: var(--muted);
 }
 
-.owner-card img {
-  width: 100%;
-  max-width: 260px;
-  height: auto;
-  display: block;
-  margin: 0 auto 15px;
-  border-radius: 14px;
-  border: 2px solid var(--accent);
+.highlight {
+  color: var(--accent);
+  font-weight: 700;
 }
 
-/* GHL embeds */
+/* Widget and embed support */
 iframe {
   display: block;
   width: 100%;
@@ -222,7 +206,17 @@ iframe {
   min-height: 860px;
 }
 
-/* Mobile */
+/* Owner images */
+.owner-card img {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px;
+  border-radius: 14px;
+  border: 2px solid var(--accent);
+}
+
 @media (max-width: 700px) {
   .brand h1 {
     font-size: 1.6rem;
@@ -232,31 +226,8 @@ iframe {
     font-size: 1.9rem;
   }
 
-  .topbar {
-    align-items: flex-start;
-  }
-
   nav {
     width: 100%;
-  }
-
-  nav a {
-    flex: 1 1 auto;
-    text-align: center;
-  }
-
-  .hero-box,
-  .section-box {
-    padding: 20px;
-  }
-
-  .button-row {
-    flex-direction: column;
-  }
-
-  .button {
-    width: 100%;
-    text-align: center;
   }
 
   #book-now iframe {
@@ -266,4 +237,4 @@ iframe {
   #request-service iframe {
     min-height: 920px;
   }
-  }
+}
