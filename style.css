@@ -185,7 +185,6 @@ footer {
   font-weight: 700;
 }
 
-/* Widget and embed support */
 iframe {
   display: block;
   width: 100%;
@@ -199,42 +198,4 @@ iframe {
 }
 
 #book-now iframe {
-  min-height: 720px;
-}
-
-#request-service iframe {
-  min-height: 860px;
-}
-
-/* Owner images */
-.owner-card img {
-  width: 100%;
-  max-width: 260px;
-  height: auto;
-  display: block;
-  margin: 0 auto 15px;
-  border-radius: 14px;
-  border: 2px solid var(--accent);
-}
-
-@media (max-width: 700px) {
-  .brand h1 {
-    font-size: 1.6rem;
-  }
-
-  .hero h2 {
-    font-size: 1.9rem;
-  }
-
-  nav {
-    width: 100%;
-  }
-
-  #book-now iframe {
-    min-height: 760px;
-  }
-
-  #request-service iframe {
-    min-height: 920px;
-  }
-}
+  min-he
